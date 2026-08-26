@@ -1,0 +1,36 @@
+generated: '2026-08-26'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: ocsial.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 15 05:14:36 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: tuball.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  8 10:48:47 2026 GMT
+  cert_issuer: Let's Encrypt
+  hsts: false
+  hsts_max_age: null
+domains:
+- domain: ocsial.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: tuball.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_policy: ?all
+  dmarc: false
+  dmarc_policy: null
+note: 'Two company hosts probed: ocsial.com (corporate site) and tuball.com (TUBALL
+  product site). ocsial.com enforces HSTS (max-age 31536000, includeSubDomains) and
+  publishes DMARC p=reject via EasyDMARC; tuball.com serves no HSTS header, no DMARC
+  record and a soft-fail SPF (?all). Neither domain publishes DNSSEC or CAA records.
+  Absence of a record is recorded as measured, not inferred.'

@@ -1,7 +1,17 @@
 aid: ocsial
 name: OCSiAl
-description: 'OCSiAl is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  OCSiAl is a Luxembourg-headquartered advanced-materials manufacturer and the world's largest
+  industrial producer of single wall carbon nanotubes (graphene nanotubes), sold under the TUBALL
+  brand. Founded in 2010, the company industrialised nanotube synthesis with its Graphetron reactors
+  and now supplies TUBALL nanotubes, TUBALL MATRIX concentrates and TUBALL BATT dispersions as
+  conductive and reinforcing additives to lithium-ion battery electrode, elastomer, thermoplastic,
+  coating, composite and ESD-flooring producers. TUBALL was the first single wall carbon nanotube
+  registered under EU REACH and covered by a US EPA consent order. OCSiAl operates production and
+  dispersion facilities in Luxembourg and Serbia plus laboratories and TUBALL CENTERs in Europe and
+  Asia, with commercial representation in more than 20 countries. It is a materials producer, not a
+  software vendor, and publishes no public API, developer portal or SDK.
+image: https://ocsial.com/static/assets/images/share/fb-share.jpg
 url: https://raw.githubusercontent.com/api-evangelist/ocsial/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +22,14 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Advanced Materials
+- Nanotechnology
+- Carbon Nanotubes
+- Chemicals
+- Manufacturing
+- Batteries
+- Coatings
+- Luxembourg
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,52 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/ocsial_stock/
+  url: https://ocsial.com/
+- type: ProductSite
+  url: https://tuball.com/
+- type: About
+  url: https://ocsial.com/about/
+- type: Blog
+  url: https://ocsial.com/press-room/
+- type: Contact
+  url: https://ocsial.com/contacts/
+- type: PrivacyPolicy
+  url: https://ocsial.com/privacy-policy/
+- type: TermsOfService
+  url: https://ocsial.com/terms-of-use/
+- type: LegalNotice
+  url: https://ocsial.com/legal-notice/
+- type: Careers
+  url: https://ocsial.com/careers/
+- type: Partners
+  url: https://ocsial.com/partners/
+- type: DomainSecurity
+  url: security/ocsial-domain-security.yml
+- type: LLMsTxt
+  url: llms/ocsial-llms.txt
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    OCSiAl manufactures and sells physical single wall carbon nanotube powder, concentrates and
+    dispersions (TUBALL); its only non-marketing web system is docs.ocsial.com, which redirects to a
+    Flexbby CRM/document-flow login rather than to any developer reference, and every OpenAPI,
+    GraphQL, MCP, agent-card and /.well-known path probed on ocsial.com, tuball.com and
+    docs.ocsial.com returned a hard 404.
+  evidence:
+  - url: https://ocsial.com/openapi.json
+    status: 404
+  - url: https://ocsial.com/.well-known/api-catalog
+    status: 404
+  - url: https://tuball.com/openapi.json
+    status: 404
+  - url: https://docs.ocsial.com/
+    status: 200
+  - url: https://api.github.com/orgs/OCSiAl/repos
+    status: 200
+  checked: '2026-08-26'

@@ -1,0 +1,52 @@
+generated: '2026-08-26'
+method: probed
+source: live GET probes of /.well-known/* on every OCSiAl-controlled host found in apis.yml
+hit_count: 0
+hosts:
+- host: https://ocsial.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://tuball.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://docs.ocsial.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+note: >-
+  Every /.well-known/ path probed on all three OCSiAl-controlled hosts returned a real HTTP 404 with a
+  short error body (ocsial.com serves a 3,578-byte branded 404 page; tuball.com a Next.js 404 shell;
+  docs.ocsial.com a 564-byte nginx 404). None of these hosts is a soft-404 catch-all answering 200 for
+  arbitrary paths, so the absences are genuine measurements rather than an artifact of a wildcard route.
+  Nothing was saved and NO WellKnown or SecurityTxt pointer is emitted in apis.yml — this file records a
+  measured absence, not a served surface.

@@ -11,6 +11,17 @@ description: >-
   dispersion facilities in Luxembourg and Serbia plus laboratories and TUBALL CENTERs in Europe and
   Asia, with commercial representation in more than 20 countries. It is a materials producer, not a
   software vendor, and publishes no public API, developer portal or SDK.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://ocsial.com/static/assets/images/share/fb-share.jpg
 url: https://raw.githubusercontent.com/api-evangelist/ocsial/refs/heads/main/apis.yml
 x-type: company
